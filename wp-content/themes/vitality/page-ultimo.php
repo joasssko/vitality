@@ -59,7 +59,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				
 				<div class="col-md-2">
 					<div class="row">
-						<img src="<?php echo $dataresult["Beneficiario_foto"]?>" alt=""  height="80" class="pull-right"/>
+						<img src="<?php bloginfo('template_directory')?>/images/olm.png" alt=""  height="80" class="pull-right"/>
 					</div>
 				</div>
 				
@@ -78,9 +78,10 @@ if ($detect->isMobile() && !$detect->isTablet()){
 						<div class="insider">
 							
 							<?php $sensacion = $result["Atencion_enf_sensacion"];?>
+							<?php $sensacion = 5?>
 							<?php $left = ((100*$sensacion)/7)-5 ?>
 							<?php if( $sensacion == 0) {$left = 0.5;};?>
-							<span class="badge-bienestar" style="position:relative; left:<?php echo $left?>%; margin-top:5px"><?php echo $result["Atencion_enf_sensacion"];?></span>
+							<span class="badge-bienestar" style="position:relative; left:<?php echo $left?>%; margin-top:5px">5<?php //echo $result["Atencion_enf_sensacion"];?></span>
 							<div class="bar-bienestar gradient">
 								<span class="badge" style="position:relative; left:0%;">1</span>
 								<span class="badge pull-right" style="position:relative;">7</span>

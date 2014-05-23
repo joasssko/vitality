@@ -48,7 +48,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				
 				<div class="col-md-2">
 					<div class="row">
-						<a href="#" data-toggle="modal" data-target="#foto"><img src="<?php echo $result["Beneficiario_foto"]?>" alt=""  height="80" class="pull-right"/></a>
+						<a href="#" data-toggle="modal" data-target="#foto"><img src="<?php bloginfo('template_directory')?>/images/olm.png" alt=""  height="80" class="pull-right"/></a>
 						
 						<!-- Modal -->
 						<div class="modal fade" id="foto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -59,7 +59,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 								<h4 class="modal-title" id="myModalLabel"><?php echo $result["Beneficiario_genera_nombres"];?></h4>
 							  </div>
 							  <div class="modal-body" style="text-align:center">
-								<img src="<?php echo $result["Beneficiario_foto"]?>" alt="" width="300" />
+								<img src="<?php bloginfo('template_directory')?>/images/olm.png" alt="" width="300" />
 							  </div>
 							  <div class="modal-footer">
 								<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cerrar</button>
@@ -75,7 +75,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				<div class="row">
 					<div class="col-md-12">
 						<span class="data"><span class="fa fa-home fa-fw"></span><?php echo $result["Beneficiario_general_direccion"];?>&nbsp;</span>
-						<span class="data"><span class="fa fa-envelope fa-fw"></span><?php echo $result["Beneficiario_general_email"];?>&nbsp;</span>
+						<span class="data"><span class="fa fa-envelope fa-fw"></span><?php //echo $result["Beneficiario_general_email"];?>dameva@fa.kemail.com&nbsp;</span>
 						<span class="data"><span class="fa fa-phone fa-fw"></span><?php echo $result["Beneficiario_general_telefono"];?>&nbsp;</span>
 						<span class="data"><span class="fa fa-mobile fa-fw"></span><?php echo $result["Beneficiario_general_celular"];?>&nbsp;</span>
 					</div>
@@ -86,7 +86,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				<div class="insider">
 					
 					<?php $bienestar = $result["Beneficiario_sensacion"]["vitality_beneficiario_sensacion.vitality_beneficiario_sensacionItem"]?>
-					
+					<?php //$bienestar = 6?>
 					<?php //var_dump($bienestar)?>
 					
 					<div id="sensaciondebienestar" style="height: 180px;"></div>
@@ -113,17 +113,11 @@ if ($detect->isMobile() && !$detect->isTablet()){
 					  axes: true
 					});
 					</script>
-				
-					
 					<?php ?>
 					
 				</div>						
 						
 					<div class="clear separator"></div>
-				
-				  	<!--<h3>Diagnóstico paciente</h3>
-					<p><?php echo $result["Beneficiario_salud_diagnostico"]?></p> -->
-					
 					<h3>Indicaciones médicas</h3>
 					<p><?php echo $result["Beneficiario_salud_indicaciones"];?></p>
 					<div class="separator"></div>
@@ -147,8 +141,6 @@ if ($detect->isMobile() && !$detect->isTablet()){
 		</div>
 	</div>
 </div>
-
-
 <?php /*alertas*/?>
 <div class="modal fade bs-example-modal-sm alertas" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">

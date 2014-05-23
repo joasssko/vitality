@@ -49,7 +49,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				
 				<div class="col-md-2">
 					<div class="row">
-						<img src="<?php echo $dataresult["Beneficiario_foto"]?>" alt=""  height="80" class="pull-right"/>
+						<img src="<?php bloginfo('template_directory')?>/images/olm.png" alt=""  height="80" class="pull-right"/>
 					</div>
 				</div>
 			
@@ -84,7 +84,9 @@ if ($detect->isMobile() && !$detect->isTablet()){
 					foreach( $atenciones as $atencion):?>
 					<tr>
 					  <td><?php echo $atencion["atencion_enf_fecha"]?></td>
-					  <td><?php echo $atencion["atencion_enf_enfermera"]?></td>
+					  
+					  <td><?php //echo $atencion["atencion_enf_enfermera"]?>Josefina Canales Contreras</td>
+					  
 					  <td><a href="<?php echo get_page_link('45')?>?atencion=<?php echo $atencion["atencion_enf_id"]?>"><span class="fa fa-eye"></span></a></td>
 					</tr>
 					<?php endforeach;?>

@@ -49,7 +49,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				
 				<div class="col-md-2">
 					<div class="row">
-						<img src="<?php echo $dataresult["Beneficiario_foto"]?>" alt=""  height="80" class="pull-right"/>
+						<img src="<?php bloginfo('template_directory')?>/images/olm.png" alt=""  height="80" class="pull-right"/>
 					</div>
 				</div>
 			
@@ -99,7 +99,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 								<h4 class="modal-title" id="myModalLabel">Exámen | <?php echo $atencion["examen_nombre"]?> <span class="label label-info"><?php echo $atencion["examen_fecha"]?></span></h4>
 							  </div>
 							  <div class="modal-body exa-<?php echo $atencion["examen_id"]?>">
-								<img src="<?php echo $atencion["examen_url"]?>" alt="" width="100%" />
+								<img src="http://uncorazonparajuan.files.wordpress.com/2012/03/informe-medico-20121.jpg" alt="" width="100%" />
 							  </div>
 							  <div class="modal-footer">
 								<button type="button" class="btn btn-info" onclick="jQuery('.exa-<?php echo $atencion["examen_id"]?>').printThis({printContainer: true});">Imprimir exámen</button>

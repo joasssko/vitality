@@ -44,10 +44,17 @@ if ($detect->isMobile() && !$detect->isTablet()){
 			
 			<div class="clear separator"></div>
 			  <?php  $afiliados = $result["Beneficiarios"]["vitality_beneficiario"];
-			  foreach( $afiliados as $afiliado):?>
+			  $acount= 0;
+			  foreach( $afiliados as $afiliado):
+			  $acount++;
+			  ?>
 			  <div class="col-md-3">
 				<a href="<?php echo get_page_link('15')?>" onclick="jQuery.cookie('beneficiario' , '<?php echo $afiliado["beneficiario_rut"]?>' , { 'path' : '/' })" class="thumbnail">
-				  <img data-src="<?php echo $afiliado["beneficiario_foto"]?>" src="<?php echo $afiliado["beneficiario_foto"]?>" width="100%" >
+				<?php if( $acount == 1){?>
+				  <img data-src="<?php echo $afiliado["beneficiario_foto"]?>" src="<?php bloginfo('template_directory')?>/images/olw.png" width="100%" >
+				 <?php }else{?>
+				  <img data-src="<?php echo $afiliado["beneficiario_foto"]?>" src="<?php bloginfo('template_directory')?>/images/olm.png" width="100%" >
+				 <?php }?>
 				</a>
 				<h5><?php echo $afiliado["beneficiario_nombres"]?></h5>
 				<a href="<?php echo get_page_link('15')?>" onclick="jQuery.cookie('beneficiario' , '<?php echo $afiliado["beneficiario_rut"]?>' , { 'path' : '/' })" class="btn btn-block btn-large btn-success">Ver resumen del paciente</a>
@@ -55,7 +62,6 @@ if ($detect->isMobile() && !$detect->isTablet()){
 			  <?php endforeach?>
 
 			<div class="clear separator"></div>
-			
 		</div>
 	</div>
 </div>

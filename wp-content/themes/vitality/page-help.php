@@ -47,7 +47,7 @@ if ($detect->isMobile() && !$detect->isTablet()){
 				</div>
 				<div class="col-md-2">
 					<div class="row">
-						<img src="<?php echo $dataresult["Beneficiario_foto"]?>" alt=""  height="80" class="pull-right"/>
+						<img src="<?php bloginfo('template_directory')?>/images/olm.png" alt=""  height="80" class="pull-right"/>
 					</div>
 				</div>
 				<div class="separator clear border"></div>
